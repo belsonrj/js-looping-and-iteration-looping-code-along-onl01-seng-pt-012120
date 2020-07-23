@@ -1,17 +1,15 @@
-const names = ['Lisa', 'Kaitlin', 'Jan'];
- 
-function writeCards(names) {
-  for (let i = 0; i < names.length; i++) {
-    console.log(`Thank you, ${names[i]} for the wonderful surprise gift!`);
+function writeCards( namesArray, event ) {
+  let thankYouCards = []
+  for ( let i = 0; i < namesArray.length; i++ ) {
+    thankYouCards.push( `Thank you, ${namesArray[i]}, for the wonderful ${event} gift!` )
   }
- 
-  return names;
+  return thankYouCards
 }
 
-
- 
- let countdown = 10;
- while (countdown >= 0) {
-  console.log(countdown--);
+function countdown( countdown ) {
+  while ( countdown > 0 ) {
+    console.log( countdown );
+    countdown -= 1;
+  }
+  console.log( countdown );
 }
- 
